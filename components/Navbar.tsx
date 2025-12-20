@@ -52,7 +52,9 @@ export default function Navbar() {
           {/* Logo */}
           <Link
             href="/"
-            className="text-2xl font-bold text-gray-900 hover:text-blue-600 transition-colors duration-200"
+            className={`text-2xl font-bold transition-colors duration-200 ${
+              isScrolled ? 'text-gray-900 hover:text-blue-600' : 'text-white hover:text-blue-200'
+            }`}
             onClick={handleLinkClick}
           >
             Brand
@@ -64,14 +66,22 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200 relative group"
+                className={`font-medium transition-colors duration-200 relative group ${
+                  isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-blue-200'
+                }`}
               >
                 {link.label}
                 {/* Hover underline effect */}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full" />
+                <span className={`absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full ${
+                  isScrolled ? 'bg-blue-600' : 'bg-white'
+                }`} />
               </Link>
             ))}
-            <button className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors duration-200 font-medium">
+            <button className={`px-6 py-2 rounded-full transition-colors duration-200 font-medium ${
+              isScrolled 
+                ? 'bg-blue-600 text-white hover:bg-blue-700' 
+                : 'bg-white/90 text-gray-900 hover:bg-white'
+            }`}>
               Get Started
             </button>
           </div>
@@ -83,19 +93,19 @@ export default function Navbar() {
             aria-label="Toggle menu"
           >
             <span
-              className={`block w-6 h-0.5 bg-gray-900 transition-all duration-300 ${
-                isOpen ? 'rotate-45 translate-y-2' : ''
-              }`}
+              className={`block w-6 h-0.5 transition-all duration-300 ${
+                isScrolled ? 'bg-gray-900' : 'bg-white'
+              } ${isOpen ? 'rotate-45 translate-y-2' : ''}`}
             />
             <span
-              className={`block w-6 h-0.5 bg-gray-900 transition-all duration-300 ${
-                isOpen ? 'opacity-0' : 'opacity-100'
-              }`}
+              className={`block w-6 h-0.5 transition-all duration-300 ${
+                isScrolled ? 'bg-gray-900' : 'bg-white'
+              } ${isOpen ? 'opacity-0' : 'opacity-100'}`}
             />
             <span
-              className={`block w-6 h-0.5 bg-gray-900 transition-all duration-300 ${
-                isOpen ? '-rotate-45 -translate-y-2' : ''
-              }`}
+              className={`block w-6 h-0.5 transition-all duration-300 ${
+                isScrolled ? 'bg-gray-900' : 'bg-white'
+              } ${isOpen ? '-rotate-45 -translate-y-2' : ''}`}
             />
           </button>
         </div>
@@ -111,7 +121,9 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="block text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200 py-2"
+                className={`block font-medium transition-colors duration-200 py-2 ${
+                  isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-gray-900 hover:text-blue-600'
+                }`}
                 onClick={handleLinkClick}
               >
                 {link.label}
