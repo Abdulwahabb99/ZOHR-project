@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from "react";
 
 interface Slide {
   id: number;
@@ -13,27 +13,28 @@ interface Slide {
 const slides: Slide[] = [
   {
     id: 1,
-    title: 'Inspection Experts',
-    description: 'Get to know our inspectors and how we get the job done.',
-    buttonText: 'Read More',
+    title: "Inspection Experts",
+    description: "Get to know our inspectors and how we get the job done.",
+    buttonText: "Read More",
+    imageUrl: "https://mpleg.com/images/slider/ff8300db-e.jpg",
   },
   {
     id: 2,
-    title: 'Professional Services',
-    description: 'Delivering excellence in every project we undertake.',
-    buttonText: 'Learn More',
+    title: "Professional Services",
+    description: "Delivering excellence in every project we undertake.",
+    buttonText: "Learn More",
   },
   {
     id: 3,
-    title: 'Quality Assurance',
-    description: 'Committed to the highest standards of quality and safety.',
-    buttonText: 'Get Started',
+    title: "Quality Assurance",
+    description: "Committed to the highest standards of quality and safety.",
+    buttonText: "Get Started",
   },
 ];
 
 /**
  * Hero Slider Component
- * 
+ *
  * Features:
  * - Multiple slides with background images
  * - Navigation arrows
@@ -90,15 +91,15 @@ export default function Hero() {
           <div
             key={slide.id}
             className={`absolute inset-0 transition-opacity duration-1000 ${
-              index === currentSlide ? 'opacity-100' : 'opacity-0'
+              index === currentSlide ? "opacity-100" : "opacity-0"
             }`}
             style={{
               backgroundImage: slide.imageUrl
                 ? `url(${slide.imageUrl})`
                 : `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("data:image/svg+xml,%3Csvg width='1920' height='1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23e5e7eb;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23d1d5db;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23grad)'/%3E%3C/svg%3E")`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              backgroundRepeat: 'no-repeat',
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
             }}
           >
             {/* Dark overlay for better text readability */}
@@ -116,8 +117,8 @@ export default function Hero() {
                 key={slide.id}
                 className={`transition-all duration-1000 ${
                   index === currentSlide
-                    ? 'opacity-100 translate-x-0'
-                    : 'opacity-0 -translate-x-8'
+                    ? "opacity-100 translate-x-0"
+                    : "opacity-0 -translate-x-8"
                 }`}
               >
                 {index === currentSlide && (
@@ -194,8 +195,8 @@ export default function Hero() {
             onClick={() => goToSlide(index)}
             className={`transition-all duration-300 rounded-full ${
               index === currentSlide
-                ? 'w-3 h-3 bg-white'
-                : 'w-3 h-3 bg-transparent border-2 border-white'
+                ? "w-3 h-3 bg-white"
+                : "w-3 h-3 bg-transparent border-2 border-white"
             }`}
             aria-label={`Go to slide ${index + 1}`}
           />
