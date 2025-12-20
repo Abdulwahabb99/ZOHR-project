@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 /**
  * Navbar Component
@@ -15,16 +16,27 @@ import Link from 'next/link';
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
 
-  // Handle scroll effect for navbar background
+  // Handle scroll effect for navbar background and pathname changes
   useEffect(() => {
+    // On other pages, always show solid background
+    if (pathname !== '/') {
+      setIsScrolled(true);
+      return;
+    }
+
+    // On home page, handle scroll-based background
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
 
+    // Set initial state for home page
+    setIsScrolled(window.scrollY > 20);
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [pathname]);
 
   // Close mobile menu when clicking outside or on a link
   const handleLinkClick = () => {
@@ -32,11 +44,11 @@ export default function Navbar() {
   };
 
   const navLinks = [
-    { href: '#home', label: 'Home' },
-    { href: '#about', label: 'About' },
-    { href: '#services', label: 'Services' },
-    { href: '#portfolio', label: 'Portfolio' },
-    { href: '#contact', label: 'Contact' },
+    { href: '/', label: 'Home' },
+    { href: '/about', label: 'About Us' },
+    { href: '/lifting', label: 'Inspection' },
+    { href: '/portfolio', label: 'Portfolio' },
+    { href: '/contact', label: 'Contact Us' },
   ];
 
   return (

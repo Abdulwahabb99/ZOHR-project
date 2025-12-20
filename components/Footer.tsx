@@ -13,10 +13,10 @@ export default function Footer() {
 
   const footerLinks = {
     company: [
-      { href: '#about', label: 'About Us' },
-      { href: '#services', label: 'Services' },
-      { href: '#portfolio', label: 'Portfolio' },
-      { href: '#contact', label: 'Contact' },
+      { href: '/about', label: 'About Us' },
+      { href: '/lifting', label: 'Inspection' },
+      { href: '/portfolio', label: 'Portfolio' },
+      { href: '/contact', label: 'Contact Us' },
     ],
     resources: [
       { href: '#', label: 'Blog' },
