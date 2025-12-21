@@ -62,23 +62,23 @@ export default function ContactPage() {
                 EGYPT BRANCH
               </h2>
               <div className="space-y-3 text-gray-700">
-                <p className="flex items-start">
+                <div className="flex items-start">
                   <span className="font-semibold min-w-[100px]">Address:</span>
                   <span>
                     Apartment NO 2 building NO 4 Faisal City - ALEXANDRIA - EGYPT
                   </span>
-                </p>
-                <p className="flex items-start">
+                </div>
+                <div className="flex items-start">
                   <span className="font-semibold min-w-[100px]">Phone:</span>
-                  <span className="space-y-1">
+                  <div className="space-y-1">
                     <div>002-01229595209</div>
                     <div>002-01222301036</div>
                     <div>002035372108</div>
-                  </span>
-                </p>
-                <p className="flex items-start">
+                  </div>
+                </div>
+                <div className="flex items-start">
                   <span className="font-semibold min-w-[100px]">Email:</span>
-                  <span className="space-y-1">
+                  <div className="space-y-1">
                     <a
                       href="mailto:m.mpl@mpleg.com"
                       className="text-blue-600 hover:underline block"
@@ -91,16 +91,16 @@ export default function ContactPage() {
                     >
                       m.mpleg@gmail.com
                     </a>
-                  </span>
-                </p>
-                <p className="flex items-start">
+                  </div>
+                </div>
+                <div className="flex items-start">
                   <span className="font-semibold min-w-[100px]">CEO:</span>
                   <span>MOHAMED SALAH ELDIN</span>
-                </p>
-                <p className="flex items-start">
+                </div>
+                <div className="flex items-start">
                   <span className="font-semibold min-w-[100px]">Sales Manager:</span>
                   <span>MOHAMED SAKR</span>
-                </p>
+                </div>
               </div>
             </div>
 
@@ -110,14 +110,14 @@ export default function ContactPage() {
                 SAUDI ARABIA BRANCH
               </h2>
               <div className="space-y-3 text-gray-700">
-                <p className="flex items-start">
+                <div className="flex items-start">
                   <span className="font-semibold min-w-[100px]">Address:</span>
                   <span>ELKHUBAR SAUDI ARABIA</span>
-                </p>
-                <p className="flex items-start">
+                </div>
+                <div className="flex items-start">
                   <span className="font-semibold min-w-[100px]">Phone:</span>
                   <span>00966509566208</span>
-                </p>
+                </div>
               </div>
             </div>
 
@@ -127,16 +127,16 @@ export default function ContactPage() {
                 ROMANIA BRANCH
               </h2>
               <div className="space-y-3 text-gray-700">
-                <p className="flex items-start">
+                <div className="flex items-start">
                   <span className="font-semibold min-w-[100px]">Address:</span>
                   <span>
                     BUCURESTI NOI, SEMICENTRAL SECTOR BUCURESTI ROMANIA
                   </span>
-                </p>
-                <p className="flex items-start">
+                </div>
+                <div className="flex items-start">
                   <span className="font-semibold min-w-[100px]">Phone:</span>
                   <span>0040768029378</span>
-                </p>
+                </div>
               </div>
             </div>
           </div>
