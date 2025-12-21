@@ -81,7 +81,7 @@ export default function PortfolioSection() {
         {/* Section Header */}
         <div className="text-center mb-16 fade-in-element opacity-0 translate-y-8 transition-all duration-700">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Our Portfolio
+            Our Projects
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Explore some of our recent work and see how we've helped businesses
