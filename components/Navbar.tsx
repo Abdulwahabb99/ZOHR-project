@@ -53,10 +53,8 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-white/95 backdrop-blur-md shadow-sm'
-          : 'bg-transparent'
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/95 backdrop-blur-md shadow-sm ${
+        !isScrolled ? 'md:bg-transparent md:backdrop-blur-none md:shadow-none' : ''
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -64,8 +62,8 @@ export default function Navbar() {
           {/* Logo */}
           <Link
             href="/"
-            className={`text-2xl font-bold transition-colors duration-200 ${
-              isScrolled ? 'text-gray-900 hover:text-blue-600' : 'text-white hover:text-blue-200'
+            className={`text-2xl font-bold transition-colors duration-200 text-gray-900 hover:text-blue-600 ${
+              !isScrolled ? 'md:text-white md:hover:text-blue-200' : ''
             }`}
             onClick={handleLinkClick}
           >
@@ -105,19 +103,19 @@ export default function Navbar() {
             aria-label="Toggle menu"
           >
             <span
-              className={`block w-6 h-0.5 transition-all duration-300 ${
-                isScrolled ? 'bg-gray-900' : 'bg-white'
-              } ${isOpen ? 'rotate-45 translate-y-2' : ''}`}
+              className={`block w-6 h-0.5 transition-all duration-300 bg-gray-900 ${
+                isOpen ? 'rotate-45 translate-y-2' : ''
+              }`}
             />
             <span
-              className={`block w-6 h-0.5 transition-all duration-300 ${
-                isScrolled ? 'bg-gray-900' : 'bg-white'
-              } ${isOpen ? 'opacity-0' : 'opacity-100'}`}
+              className={`block w-6 h-0.5 transition-all duration-300 bg-gray-900 ${
+                isOpen ? 'opacity-0' : 'opacity-100'
+              }`}
             />
             <span
-              className={`block w-6 h-0.5 transition-all duration-300 ${
-                isScrolled ? 'bg-gray-900' : 'bg-white'
-              } ${isOpen ? '-rotate-45 -translate-y-2' : ''}`}
+              className={`block w-6 h-0.5 transition-all duration-300 bg-gray-900 ${
+                isOpen ? '-rotate-45 -translate-y-2' : ''
+              }`}
             />
           </button>
         </div>
