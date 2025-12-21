@@ -19,6 +19,7 @@ export default function PortfolioSection() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add('animate-slide-up');
+            observer.unobserve(entry.target);
           }
         });
       },
@@ -75,17 +76,18 @@ export default function PortfolioSection() {
     <section
       id="portfolio"
       ref={sectionRef}
-      className="py-20 md:py-32 bg-white"
+      className="py-12 md:py-16 bg-white"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16 fade-in-element opacity-0 translate-y-8 transition-all duration-700">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+        <div className="text-center mb-10">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-3 uppercase tracking-tight">
             Our Projects
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Explore some of our recent work and see how we've helped businesses
-            achieve their goals.
+          {/* Underline */}
+          <div className="w-20 h-0.5 bg-gray-800 mx-auto mb-4"></div>
+          <p className="text-base text-gray-600 max-w-2xl mx-auto">
+            Some of our latest successful projects that we are proud to present it to you
           </p>
         </div>
 
