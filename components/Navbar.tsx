@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 
 /**
@@ -62,12 +63,17 @@ export default function Navbar() {
           {/* Logo */}
           <Link
             href="/"
-            className={`text-2xl font-bold transition-colors duration-200 text-gray-900 hover:text-blue-600 ${
-              !isScrolled ? 'md:text-white md:hover:text-blue-200' : ''
-            }`}
+            className="flex items-center h-full transition-opacity duration-200 hover:opacity-80"
             onClick={handleLinkClick}
           >
-            Brand
+            <Image
+              src="/logo.jpeg"
+              alt="ZOHR Logo"
+              width={120}
+              height={50}
+              className="h-10 md:h-12 w-auto object-contain"
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation */}

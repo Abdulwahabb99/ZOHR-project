@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 /**
  * Footer Component
@@ -44,7 +45,15 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 md:gap-12">
           {/* Brand Section */}
           <div className="lg:col-span-2">
-            <h3 className="text-2xl font-bold text-white mb-4">Brand</h3>
+            <div className="mb-4">
+              <Image
+                src="/logo.jpeg"
+                alt="ZOHR Logo"
+                width={140}
+                height={60}
+                className="h-12 w-auto object-contain"
+              />
+            </div>
             <p className="text-gray-400 mb-6 max-w-md">
               Creating exceptional digital experiences that drive results. We
               help businesses transform their online presence.
@@ -118,7 +127,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-          <p>&copy; {currentYear} Brand. All rights reserved.</p>
+          <p>&copy; {currentYear} ZOHR. All rights reserved.</p>
         </div>
       </div>
     </footer>
