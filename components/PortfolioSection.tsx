@@ -53,12 +53,12 @@ export default function PortfolioSection() {
     {
       title: 'Load Testing',
       category: 'Safety Compliance',
-      imageUrl: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=800&fit=crop&q=80',
+      imageUrl: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&h=800&fit=crop&q=80',
     },
     {
       title: 'Training Programs',
       category: 'Professional Development',
-      imageUrl: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&h=800&fit=crop&q=80',
+      imageUrl: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&h=800&fit=crop&q=80',
     },
     {
       title: 'Equipment Certification',

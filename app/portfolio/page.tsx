@@ -111,7 +111,7 @@ export default function PortfolioPage() {
               },
               {
                 title: 'ROV Load Test',
-                image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=600&fit=crop&q=80',
+                image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&h=600&fit=crop&q=80',
               },
               {
                 title: 'Load Test for Arab Contractors',
