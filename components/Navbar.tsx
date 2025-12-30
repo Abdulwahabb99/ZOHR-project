@@ -5,6 +5,10 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 
+type NavLink = 
+  | { href: string; label: string; children?: never }
+  | { href?: never; label: string; children: { href: string; label: string }[] };
+
 /**
  * Navbar Component
  * 
@@ -13,10 +17,12 @@ import { usePathname } from 'next/navigation';
  * - Smooth scroll behavior
  * - Sticky header that appears on scroll
  * - Active link highlighting
+ * - Dropdown menu support
  */
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const pathname = usePathname();
 
   // Handle scroll effect for navbar background and pathname changes
@@ -39,15 +45,48 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [pathname]);
 
+  // Close dropdown when pathname changes
+  useEffect(() => {
+    setIsDropdownOpen(false);
+  }, [pathname]);
+
   // Close mobile menu when clicking outside or on a link
   const handleLinkClick = () => {
     setIsOpen(false);
+    setIsDropdownOpen(false);
   };
 
-  const navLinks = [
+  // Toggle dropdown menu
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as HTMLElement;
+      if (isDropdownOpen && !target.closest('.dropdown-container')) {
+        setIsDropdownOpen(false);
+      }
+    };
+
+    if (isDropdownOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+      return () => {
+        document.removeEventListener('mousedown', handleClickOutside);
+      };
+    }
+  }, [isDropdownOpen]);
+
+  const navLinks: NavLink[] = [
     { href: '/', label: 'Home' },
     { href: '/about', label: 'About Us' },
-    { href: '/lifting', label: 'Inspection' },
+    { 
+      label: 'Inspection',
+      children: [
+        { href: '/lifting', label: 'Lifting' },
+      ]
+    },
     { href: '/portfolio', label: 'Portfolio' },
     { href: '/contact', label: 'Contact Us' },
   ];
@@ -78,28 +117,65 @@ export default function Navbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`font-medium transition-colors duration-200 relative group ${
-                  isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-blue-200'
-                }`}
-              >
-                {link.label}
-                {/* Hover underline effect */}
-                <span className={`absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full ${
-                  isScrolled ? 'bg-blue-600' : 'bg-white'
-                }`} />
-              </Link>
+            {navLinks.map((link, index) => (
+              <div key={index} className="relative group">
+                {link.href ? (
+                  <Link
+                    href={link.href}
+                    className={`font-medium transition-colors duration-200 relative ${
+                      isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-blue-200'
+                    }`}
+                  >
+                    {link.label}
+                    {/* Hover underline effect */}
+                    <span className={`absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full ${
+                      isScrolled ? 'bg-blue-600' : 'bg-white'
+                    }`} />
+                  </Link>
+                ) : (
+                  <div className="relative dropdown-container">
+                    <button
+                      onClick={toggleDropdown}
+                      className={`font-medium transition-colors duration-200 relative flex items-center ${
+                        isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-blue-200'
+                      }`}
+                    >
+                      {link.label}
+                      <svg
+                        className={`ml-1 h-4 w-4 transition-transform duration-200 ${
+                          isDropdownOpen ? 'rotate-180' : ''
+                        }`}
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </button>
+                    
+                    {/* Dropdown Menu */}
+                    {isDropdownOpen && link.children && (
+                      <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 z-50">
+                        {link.children.map((child, childIndex) => (
+                          <Link
+                            key={childIndex}
+                            href={child.href}
+                            onClick={handleLinkClick}
+                            className={`block px-4 py-2 text-sm transition-colors duration-200 ${
+                              pathname === child.href
+                                ? 'bg-blue-50 text-blue-600 font-medium'
+                                : 'text-gray-700 hover:bg-gray-50 hover:text-blue-600'
+                            }`}
+                          >
+                            {child.label}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                )}
+              </div>
             ))}
-            <button className={`px-6 py-2 rounded-full transition-colors duration-200 font-medium ${
-              isScrolled 
-                ? 'bg-blue-600 text-white hover:bg-blue-700' 
-                : 'bg-white/90 text-gray-900 hover:bg-white'
-            }`}>
-              Get Started
-            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -133,21 +209,43 @@ export default function Navbar() {
           }`}
         >
           <div className="py-4 space-y-4">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`block font-medium transition-colors duration-200 py-2 ${
-                  isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-gray-900 hover:text-blue-600'
-                }`}
-                onClick={handleLinkClick}
-              >
-                {link.label}
-              </Link>
+            {navLinks.map((link, index) => (
+              <div key={index}>
+                {link.href ? (
+                  <Link
+                    href={link.href}
+                    className={`block font-medium transition-colors duration-200 py-2 ${
+                      isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-gray-900 hover:text-blue-600'
+                    }`}
+                    onClick={handleLinkClick}
+                  >
+                    {link.label}
+                  </Link>
+                ) : (
+                  <div>
+                    <div className="font-medium text-gray-900 py-2">{link.label}</div>
+                    {link.children && (
+                      <div className="pl-4 space-y-2">
+                        {link.children.map((child, childIndex) => (
+                          <Link
+                            key={childIndex}
+                            href={child.href}
+                            className={`block text-sm transition-colors duration-200 py-1 ${
+                              pathname === child.href
+                                ? 'text-blue-600 font-medium'
+                                : 'text-gray-600 hover:text-blue-600'
+                            }`}
+                            onClick={handleLinkClick}
+                          >
+                            {child.label}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                )}
+              </div>
             ))}
-            <button className="w-full bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors duration-200 font-medium mt-4">
-              Get Started
-            </button>
           </div>
         </div>
       </div>
