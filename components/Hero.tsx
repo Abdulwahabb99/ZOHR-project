@@ -16,19 +16,21 @@ const slides: Slide[] = [
     title: "Inspection Experts",
     description: "Get to know our inspectors and how we get the job done.",
     buttonText: "Read More",
-    imageUrl: "https://mpleg.com/images/slider/ff8300db-e.jpg",
+    imageUrl: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1920&h=1080&fit=crop&q=80",
   },
   {
     id: 2,
     title: "Professional Services",
     description: "Delivering excellence in every project we undertake.",
     buttonText: "Learn More",
+    imageUrl: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&h=1080&fit=crop&q=80",
   },
   {
     id: 3,
     title: "Quality Assurance",
     description: "Committed to the highest standards of quality and safety.",
     buttonText: "Get Started",
+    imageUrl: "https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=1920&h=1080&fit=crop&q=80",
   },
 ];
 

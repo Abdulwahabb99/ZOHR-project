@@ -37,36 +37,24 @@ export default function AboutPage() {
             {/* Left Column - Text Content */}
             <div className="space-y-6">
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
-                Overview :
+                About ZOHR
               </h2>
               
-              <div className="space-y-5 text-gray-700 leading-relaxed text-base md:text-lg">
-                <p>
-                  Dedicated to offering safe, quality products at realistic prices, Safety Services Group is well known for its fast, reliable services, backed by highly experienced professionals who care, with a cosmopolitan professional staff.
+              <div className="space-y-6 text-gray-700 leading-relaxed text-base md:text-lg">
+                <p className="text-lg md:text-xl text-gray-800 font-medium">
+                  ZOHR for Supplies and Services was established based on the experience, ambition, and determination of skilled Egyptian professionals aiming to add real value to the lifting and marine sectors. The company focuses on the lifting niche, recognizing it as a critical foundation for protecting lives, assets, and project integrity.
                 </p>
                 
                 <p>
-                  The company engineers have years of experience in Crane Testing, Supply and Certification of all kinds of Lifting Equipment in accordance with British stander and the UAE Federal Law and International Safety standards.
+                  ZOHR is committed to raising industry standards by enhancing the competence of lifting supervisors and riggers through appropriate training, while also improving the safety and reliability of lifting equipment through professional inspection, testing, and certification services. Our goal is to support project completion with the highest levels of safety, efficiency, and technical compliance, while maintaining competitive pricing and minimizing downtime — without compromising safety.
                 </p>
                 
                 <p>
-                  The group has now expanded its operations with a wide range of quality products and services to meet the vast requirements of Marine, Lifting, Oil and Gas Industries across the Europe, Middle East and Asian countries.
+                  We are dedicated to supplying safe, high-quality products and delivering reliable services at realistic prices. ZOHR is known for its responsive and dependable service, supported by experienced engineers and technical personnel who place safety, quality, and customer satisfaction at the core of everything they do.
                 </p>
                 
                 <p>
-                  The strict adherence of the group to the safety of the equipment tested or supplied is met with the In-house 100 Tone Tensile Test Bed for carrying out Proof Load Testing and Loose Lifting Equipment Testing facilities.
-                </p>
-                
-                <p>
-                  A total area of 700 sq. feet is currently being fully utilized by the Head Office in free zone in Damietta.
-                </p>
-                
-                <p>
-                  The company is the first in the Middle East to have the manufacturing facility for slings with Sockets. The other specialty products include Chain Slings and Fittings, Shackles, Anchors, Anchor Chain and accessories, Cargo and Safety Nets, Pilot Ladders, Synthetic Ropes, Mooring Tails, Fire Extinguishers, Breathing Apparatus and other related Safety Equipment. Various training programmers offered by the group includes First Aid, H2S, Fire Fighting, HSE Awareness, Site Safety Awareness, Desert Driving, Site Risk Assessment, Crane and Fork Lift Operation, Slinging & Rigging etc. are conducted by qualified multilingual Professionals.
-                </p>
-                
-                <p>
-                  The Group's Marine Electronic Division is providing service & supply of quality products supported by expert personnel.
+                  Our engineering team brings extensive experience in crane inspection, load testing, and the supply and certification of all types of lifting equipment, in accordance with British Standards, international safety standards, and applicable regional regulations.
                 </p>
               </div>
             </div>

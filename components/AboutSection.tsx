@@ -48,63 +48,33 @@ export default function AboutSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 items-center">
           {/* Image/Visual Section */}
           <div className="fade-in-element opacity-0 translate-y-8 transition-all duration-700">
-            <div className="relative aspect-square rounded-2xl bg-gradient-to-br from-blue-100 to-purple-100 overflow-hidden shadow-xl">
-              {/* Placeholder for image - replace with actual image */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-6xl font-bold text-blue-600 opacity-20">
-                  About Us
-                </div>
-              </div>
+            <div className="relative aspect-square rounded-2xl overflow-hidden shadow-xl">
+              <img
+                src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=800&fit=crop&q=80"
+                alt="ZOHR - Lifting and Marine Services"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
 
           {/* Content Section */}
           <div className="fade-in-element opacity-0 translate-y-8 transition-all duration-700 delay-200">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              We Create Digital
-              <span className="block text-blue-600">Excellence</span>
+              About <span className="text-blue-600">ZOHR</span>
             </h2>
-            <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-              Our team of passionate designers and developers work together to
-              create digital experiences that not only look stunning but also
-              perform exceptionally well.
-            </p>
-            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-              With years of experience in the industry, we've helped numerous
-              businesses transform their online presence and achieve their goals.
-            </p>
-
-            {/* Feature List */}
-            <div className="space-y-4">
-              {[
-                'Modern & Responsive Design',
-                'Performance Optimized',
-                'SEO Friendly',
-                'User-Centered Approach',
-              ].map((feature, index) => (
-                <div
-                  key={index}
-                  className="flex items-center space-x-3 fade-in-element opacity-0 translate-y-4 transition-all duration-500"
-                  style={{ transitionDelay: `${300 + index * 100}ms` }}
-                >
-                  <div className="w-6 h-6 rounded-full bg-blue-600 flex items-center justify-center flex-shrink-0">
-                    <svg
-                      className="w-4 h-4 text-white"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                  </div>
-                  <span className="text-gray-700 font-medium">{feature}</span>
-                </div>
-              ))}
+            <div className="space-y-6">
+              <p className="text-lg text-gray-700 leading-relaxed font-medium">
+                ZOHR for Supplies and Services was established based on the experience, ambition, and determination of skilled Egyptian professionals aiming to add real value to the lifting and marine sectors. The company focuses on the lifting niche, recognizing it as a critical foundation for protecting lives, assets, and project integrity.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                ZOHR is committed to raising industry standards by enhancing the competence of lifting supervisors and riggers through appropriate training, while also improving the safety and reliability of lifting equipment through professional inspection, testing, and certification services. Our goal is to support project completion with the highest levels of safety, efficiency, and technical compliance, while maintaining competitive pricing and minimizing downtime — without compromising safety.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                We are dedicated to supplying safe, high-quality products and delivering reliable services at realistic prices. ZOHR is known for its responsive and dependable service, supported by experienced engineers and technical personnel who place safety, quality, and customer satisfaction at the core of everything they do.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                Our engineering team brings extensive experience in crane inspection, load testing, and the supply and certification of all types of lifting equipment, in accordance with British Standards, international safety standards, and applicable regional regulations.
+              </p>
             </div>
           </div>
         </div>

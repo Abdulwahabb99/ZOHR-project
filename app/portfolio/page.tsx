@@ -92,27 +92,47 @@ export default function PortfolioPage() {
           ))}
         </div>
 
-        {/* Portfolio Grid - Image Placeholders */}
+        {/* Portfolio Grid - Images */}
         <div className="mt-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">Our Projects</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              'Lifeboat Inspection at AAST',
-              'Re-Socketing Off Shore at Bourbon',
-              'Lifting Plan for The Egyptian Armed Forces Stadium',
-              'ROV Load Test',
-              'Load Test for Arab Contractors',
-              'Lifting Survey for Cargil',
+              {
+                title: 'Lifeboat Inspection at AAST',
+                image: 'https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=800&h=600&fit=crop&q=80',
+              },
+              {
+                title: 'Re-Socketing Off Shore at Bourbon',
+                image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=600&fit=crop&q=80',
+              },
+              {
+                title: 'Lifting Plan for The Egyptian Armed Forces Stadium',
+                image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=600&fit=crop&q=80',
+              },
+              {
+                title: 'ROV Load Test',
+                image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=600&fit=crop&q=80',
+              },
+              {
+                title: 'Load Test for Arab Contractors',
+                image: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&h=600&fit=crop&q=80',
+              },
+              {
+                title: 'Lifting Survey for Cargil',
+                image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop&q=80',
+              },
             ].map((project, index) => (
               <div
                 key={index}
-                className="bg-gradient-to-br from-gray-200 to-gray-300 rounded-lg aspect-video flex items-center justify-center hover:shadow-lg transition-shadow duration-300 cursor-pointer group"
+                className="relative rounded-lg aspect-video overflow-hidden hover:shadow-lg transition-shadow duration-300 cursor-pointer group"
               >
-                <div className="text-center p-4">
-                  <div className="text-4xl mb-2 opacity-50 group-hover:opacity-70 transition-opacity">
-                    🏗️
-                  </div>
-                  <p className="text-gray-700 font-medium text-sm">{project}</p>
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-colors duration-300 flex items-center justify-center">
+                  <p className="text-white font-medium text-sm px-4 text-center">{project.title}</p>
                 </div>
               </div>
             ))}

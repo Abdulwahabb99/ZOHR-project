@@ -41,34 +41,34 @@ export default function PortfolioSection() {
 
   const portfolioItems = [
     {
-      title: 'E-Commerce Platform',
-      category: 'Web Development',
-      gradient: 'from-blue-400 to-blue-600',
+      title: 'Crane Inspection Services',
+      category: 'Lifting Equipment',
+      imageUrl: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=800&fit=crop&q=80',
     },
     {
-      title: 'Mobile Banking App',
-      category: 'Mobile App',
-      gradient: 'from-purple-400 to-purple-600',
+      title: 'Marine Services',
+      category: 'Offshore Operations',
+      imageUrl: 'https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=800&h=800&fit=crop&q=80',
     },
     {
-      title: 'Corporate Website',
-      category: 'Web Design',
-      gradient: 'from-pink-400 to-pink-600',
+      title: 'Load Testing',
+      category: 'Safety Compliance',
+      imageUrl: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=800&fit=crop&q=80',
     },
     {
-      title: 'SaaS Dashboard',
-      category: 'Web Development',
-      gradient: 'from-green-400 to-green-600',
+      title: 'Training Programs',
+      category: 'Professional Development',
+      imageUrl: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&h=800&fit=crop&q=80',
     },
     {
-      title: 'Restaurant App',
-      category: 'Mobile App',
-      gradient: 'from-orange-400 to-orange-600',
+      title: 'Equipment Certification',
+      category: 'Quality Assurance',
+      imageUrl: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=800&fit=crop&q=80',
     },
     {
-      title: 'Portfolio Website',
-      category: 'Web Design',
-      gradient: 'from-indigo-400 to-indigo-600',
+      title: 'Safety Inspection',
+      category: 'Industrial Services',
+      imageUrl: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=800&fit=crop&q=80',
     },
   ];
 
@@ -99,16 +99,12 @@ export default function PortfolioSection() {
               className="portfolio-item opacity-0 translate-y-8 transition-all duration-700 group relative overflow-hidden rounded-2xl aspect-square cursor-pointer"
               style={{ transitionDelay: `${index * 100}ms` }}
             >
-              {/* Placeholder Image with Gradient */}
-              <div
-                className={`absolute inset-0 bg-gradient-to-br ${item.gradient} transform group-hover:scale-110 transition-transform duration-500`}
-              >
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-white text-4xl font-bold opacity-30">
-                    {item.title}
-                  </div>
-                </div>
-              </div>
+              {/* Image */}
+              <img
+                src={item.imageUrl}
+                alt={item.title}
+                className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+              />
 
               {/* Overlay on Hover */}
               <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-6">
