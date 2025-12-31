@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
@@ -12,6 +12,16 @@ export default function ContactPage() {
     subject: '',
     message: '',
   });
+
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    // Trigger animation after component mounts
+    const timer = setTimeout(() => {
+      setIsMounted(true);
+    }, 100);
+    return () => clearTimeout(timer);
+  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -55,7 +65,11 @@ export default function ContactPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Information */}
-          <div className="space-y-8">
+          <div 
+            className={`space-y-8 ${
+              isMounted ? 'animate-slide-in-left' : 'slide-in-left-initial'
+            }`}
+          >
             {/* Egypt Branch */}
             <div className="bg-gray-50 rounded-lg p-6">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">
@@ -136,7 +150,11 @@ export default function ContactPage() {
           </div>
 
           {/* Contact Form */}
-          <div>
+          <div 
+            className={`${
+              isMounted ? 'animate-slide-in-right' : 'slide-in-right-initial'
+            }`}
+          >
             <div className="bg-gray-50 rounded-lg p-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">
                 Message Us
