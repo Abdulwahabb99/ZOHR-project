@@ -85,8 +85,8 @@ export default function AboutPage() {
               </div>
               <div className="flex items-start">
                 <span className="font-semibold min-w-[80px]">E-mail:</span>
-                <a href="mailto:m.mpl@mpleg.com" className="text-blue-600 hover:underline">
-                  m.mpl@mpleg.com
+                <a href="mailto:technical.support@zohr-co.com" className="text-blue-600 hover:underline">
+                  technical.support@zohr-co.com
                 </a>
               </div>
               <div className="flex items-start">

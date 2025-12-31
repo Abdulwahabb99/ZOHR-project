@@ -39,13 +39,13 @@ export default function LiftingPage() {
       title: 'Offshore Rigging',
       items: ['Lifting Survey', 'Drop Object Survey', 'Rope Access'],
       category: 'Offshore Rigging',
-      imageUrl: 'https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=800&h=600&fit=crop&q=80',
+      imageUrl: 'https://mpleg.com/images/slider/ded8ca0e-b.jpg',
     },
     {
       title: 'Onshore Rigging',
       items: ['Lifting Survey', 'Drop Object Survey', 'Rope Access'],
       category: 'Onshore Rigging',
-      imageUrl: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=600&fit=crop&q=80',
+      imageUrl: 'https://mpleg.com/images/slider/1701f1ab-1.jpg',
     },
     {
       title: 'Fork Lift',
@@ -63,7 +63,7 @@ export default function LiftingPage() {
       title: 'Davit Winch',
       items: ['Load Test', 'Maintenance'],
       category: 'Davit Winch',
-      imageUrl: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=800&h=600&fit=crop&q=80',
+      imageUrl: 'https://mpleg.com/images/slider/5bd90656-3.jpg',
     },
     {
       title: 'Overhead Crane',
@@ -81,7 +81,7 @@ export default function LiftingPage() {
       title: 'DP Anchor Vessel',
       items: ['Load Test', 'Hire'],
       category: 'DP Anchor Vessel',
-      imageUrl: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&h=600&fit=crop&q=80',
+      imageUrl: 'https://plus.unsplash.com/premium_photo-1677353359801-cd7127e5b828?w=800&h=600&fit=crop&q=80',
     },
     {
       title: 'Magnetic Penetration Inspection (MPI)',

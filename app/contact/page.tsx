@@ -80,16 +80,10 @@ export default function ContactPage() {
                   <span className="font-semibold min-w-[100px]">Email:</span>
                   <div className="space-y-1">
                     <a
-                      href="mailto:m.mpl@mpleg.com"
+                      href="mailto:technical.support@zohr-co.com"
                       className="text-blue-600 hover:underline block"
                     >
-                      m.mpl@mpleg.com
-                    </a>
-                    <a
-                      href="mailto:m.mpleg@gmail.com"
-                      className="text-blue-600 hover:underline block"
-                    >
-                      m.mpleg@gmail.com
+                      technical.support@zohr-co.com
                     </a>
                   </div>
                 </div>
