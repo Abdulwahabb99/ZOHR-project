@@ -23,6 +23,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState(false);
   const pathname = usePathname();
 
   // Handle scroll effect for navbar background and pathname changes
@@ -48,12 +49,19 @@ export default function Navbar() {
   // Close dropdown when pathname changes
   useEffect(() => {
     setIsDropdownOpen(false);
+    setIsMobileDropdownOpen(false);
   }, [pathname]);
 
   // Close mobile menu when clicking outside or on a link
   const handleLinkClick = () => {
     setIsOpen(false);
     setIsDropdownOpen(false);
+    setIsMobileDropdownOpen(false);
+  };
+
+  // Toggle mobile dropdown menu
+  const toggleMobileDropdown = () => {
+    setIsMobileDropdownOpen(!isMobileDropdownOpen);
   };
 
   // Toggle dropdown menu
@@ -223,23 +231,44 @@ export default function Navbar() {
                   </Link>
                 ) : (
                   <div>
-                    <div className="font-medium text-gray-900 py-2">{link.label}</div>
+                    <button
+                      onClick={toggleMobileDropdown}
+                      className="flex items-center justify-between w-full font-medium text-gray-900 py-2 hover:text-blue-600 transition-colors duration-200"
+                    >
+                      <span>{link.label}</span>
+                      <svg
+                        className={`h-4 w-4 transition-transform duration-200 ${
+                          isMobileDropdownOpen ? 'rotate-180' : ''
+                        }`}
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </button>
                     {link.children && (
-                      <div className="pl-4 space-y-2">
-                        {link.children.map((child, childIndex) => (
-                          <Link
-                            key={childIndex}
-                            href={child.href}
-                            className={`block text-sm transition-colors duration-200 py-1 ${
-                              pathname === child.href
-                                ? 'text-blue-600 font-medium'
-                                : 'text-gray-600 hover:text-blue-600'
-                            }`}
-                            onClick={handleLinkClick}
-                          >
-                            {child.label}
-                          </Link>
-                        ))}
+                      <div
+                        className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                          isMobileDropdownOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                        }`}
+                      >
+                        <div className="pl-4 space-y-2 pt-2">
+                          {link.children.map((child, childIndex) => (
+                            <Link
+                              key={childIndex}
+                              href={child.href}
+                              className={`block text-sm transition-colors duration-200 py-1 ${
+                                pathname === child.href
+                                  ? 'text-blue-600 font-medium'
+                                  : 'text-gray-600 hover:text-blue-600'
+                              }`}
+                              onClick={handleLinkClick}
+                            >
+                              {child.label}
+                            </Link>
+                          ))}
+                        </div>
                       </div>
                     )}
                   </div>
