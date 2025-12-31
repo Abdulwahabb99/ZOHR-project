@@ -6,11 +6,11 @@ A fully responsive, modern website built with Next.js, React, and Tailwind CSS. 
 
 - **Fully Responsive Design**: Mobile-first approach supporting screens from 320px and up
 - **Modern UI/UX**: Clean, professional design with smooth animations
-- **Performance Optimized**: 
+- **Performance Optimized**:
   - Lazy loading for images and components
   - Optimized Core Web Vitals
   - Target Lighthouse score ≥ 90
-- **Smooth Animations**: 
+- **Smooth Animations**:
   - Scroll-based reveal animations
   - Hover effects on interactive elements
   - Smooth transitions between sections
@@ -47,38 +47,45 @@ training-website/
 ## 🎨 Components Overview
 
 ### Navbar
+
 - Fixed navigation bar that appears on scroll
 - Responsive hamburger menu for mobile devices
 - Smooth scroll to sections
 - Active link highlighting
 
 ### Hero Section
+
 - Animated text reveal on scroll
 - Call-to-action buttons
 - Statistics/features display
 - Gradient backgrounds
 
 ### About Section
+
 - Two-column layout (image + content)
 - Feature list with checkmarks
 - Scroll-triggered animations
 
 ### Services Section
+
 - Card-based grid layout
 - Hover effects on cards
 - Responsive 3-column grid
 
 ### Portfolio Section
+
 - Image grid with hover overlays
 - Gradient placeholders (replace with actual images)
 - Lazy loading support
 
 ### Contact Section
+
 - Contact form with validation-ready structure
 - Responsive form layout
 - Gradient background
 
 ### Footer
+
 - Multi-column layout
 - Social media links
 - Footer navigation links
@@ -94,16 +101,19 @@ training-website/
 ### Installation
 
 1. Navigate to the project directory:
+
 ```bash
 cd training-website
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
 ```
 
 3. Run the development server:
+
 ```bash
 npm run dev
 ```
@@ -143,6 +153,7 @@ The project uses CSS animations and Intersection Observer API for scroll-trigger
 ## 📝 Code Comments
 
 All components include detailed comments explaining:
+
 - Component purpose and features
 - Key implementation details
 - Performance considerations
@@ -151,28 +162,35 @@ All components include detailed comments explaining:
 ## 🔧 Customization
 
 ### Colors
+
 Edit the Tailwind classes in components to change the color scheme. The project uses:
+
 - Primary: Blue (`blue-600`)
 - Secondary: Purple (`purple-600`)
 - Accent colors for gradients
 
 ### Content
+
 Replace placeholder content in each component with your actual content.
 
 ### Images
+
 Replace gradient placeholders in:
+
 - `AboutSection.tsx`
 - `PortfolioSection.tsx`
 
 Use Next.js Image component for optimized images:
+
 ```tsx
-import Image from 'next/image';
-<Image src="/your-image.jpg" alt="Description" width={800} height={600} />
+import Image from "next/image";
+<Image src="/your-image.jpg" alt="Description" width={800} height={600} />;
 ```
 
 ## 📚 Learning Resources
 
 This project demonstrates:
+
 - Next.js App Router structure
 - React hooks (useState, useEffect, useRef)
 - TypeScript with React
@@ -184,6 +202,7 @@ This project demonstrates:
 ## 🎯 Next Steps
 
 To extend this project:
+
 1. Add actual images to replace placeholders
 2. Implement form validation in ContactSection
 3. Add more pages (About, Services detail pages)
@@ -191,14 +210,6 @@ To extend this project:
 5. Add dark mode toggle
 6. Implement analytics
 7. Add unit tests
-
-## 📄 License
-
-This is a training project for educational purposes.
-
-## 🤝 Contributing
-
-This is a training project. Feel free to use it as a learning resource and modify it to suit your needs.
 
 ---
 

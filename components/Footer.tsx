@@ -1,9 +1,9 @@
-import Link from 'next/link';
-import Image from 'next/image';
+import Link from "next/link";
+import Image from "next/image";
 
 /**
  * Footer Component
- * 
+ *
  * Features:
  * - Responsive grid layout
  * - Social media links
@@ -14,29 +14,29 @@ export default function Footer() {
 
   const footerLinks = {
     company: [
-      { href: '/about', label: 'About Us' },
-      { href: '/lifting', label: 'Inspection' },
-      { href: '/portfolio', label: 'Portfolio' },
-      { href: '/contact', label: 'Contact Us' },
+      { href: "/about", label: "About Us" },
+      { href: "/lifting", label: "Inspection" },
+      { href: "/portfolio", label: "Portfolio" },
+      { href: "/contact", label: "Contact Us" },
     ],
     resources: [
-      { href: '#', label: 'Blog' },
-      { href: '#', label: 'Documentation' },
-      { href: '#', label: 'Support' },
-      { href: '#', label: 'FAQ' },
+      { href: "#", label: "Blog" },
+      { href: "#", label: "Documentation" },
+      { href: "#", label: "Support" },
+      { href: "#", label: "FAQ" },
     ],
     legal: [
-      { href: '#', label: 'Privacy Policy' },
-      { href: '#', label: 'Terms of Service' },
-      { href: '#', label: 'Cookie Policy' },
+      { href: "#", label: "Privacy Policy" },
+      { href: "#", label: "Terms of Service" },
+      { href: "#", label: "Cookie Policy" },
     ],
   };
 
   const socialLinks = [
-    { name: 'Twitter', href: '#', icon: '𝕏' },
-    { name: 'LinkedIn', href: '#', icon: 'in' },
-    { name: 'GitHub', href: '#', icon: '⚡' },
-    { name: 'Instagram', href: '#', icon: '📷' },
+    { name: "Twitter", href: "#", icon: "𝕏" },
+    { name: "LinkedIn", href: "#", icon: "in" },
+    { name: "GitHub", href: "#", icon: "⚡" },
+    { name: "Instagram", href: "#", icon: "📷" },
   ];
 
   return (
@@ -55,8 +55,8 @@ export default function Footer() {
               />
             </div>
             <p className="text-gray-400 mb-6 max-w-md">
-              Creating exceptional digital experiences that drive results. We
-              help businesses transform their online presence.
+              ZOHR is a company that provides lifting and marine supplies and
+              services to the industry.
             </p>
             {/* Social Media Links */}
             <div className="flex space-x-4">
@@ -133,4 +133,3 @@ export default function Footer() {
     </footer>
   );
 }
-

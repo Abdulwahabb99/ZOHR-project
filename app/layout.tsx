@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -13,11 +13,30 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Training Website - Modern Digital Experiences",
-  description: "A fully responsive training website built with Next.js, React, and Tailwind CSS. Showcasing modern web development practices.",
-  keywords: ["Next.js", "React", "Tailwind CSS", "Web Development", "Training"],
-  authors: [{ name: "Training Project" }],
-  viewport: "width=device-width, initial-scale=1",
+  title: "ZOHR",
+  description:
+    "ZOHR is a company that provides lifting and marine supplies and services to the industry.",
+  keywords: [
+    "lifting",
+    "marine",
+    "supplies",
+    "services",
+    "lifting supplies",
+    "marine supplies",
+    "lifting services",
+    "marine services",
+  ],
+  authors: [{ name: "ZOHR" }],
+  icons: {
+    icon: "/logo.jpeg",
+    shortcut: "/logo.jpeg",
+    apple: "/logo.jpeg",
+  },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({
