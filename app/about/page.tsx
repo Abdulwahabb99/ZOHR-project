@@ -94,8 +94,18 @@ export default function AboutPage() {
           <div className="mt-16 bg-gray-50 rounded-lg p-8 md:p-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">ZOHR</h2>
             <p className="text-lg text-gray-700 mb-8">
-              We are a group of innovative mindset work together to give you a
-              unique experience.
+              ZOHR for Supplies and Services is committed to supporting safe
+              working environments by identifying defects at an early stage,
+              before they develop into serious failures or incidents. All
+              inspections and services are carried out in accordance with
+              applicable regulations, international standards, and industry best
+              practices. We maintain a user-friendly digital database system
+              that provides our clients with instant access to inspection
+              records, certification, and test reports anytime and from
+              anywhere, ensuring full transparency and traceability. Our
+              experienced and qualified team is competent to inspect, test, and
+              certify a wide range of lifting equipment, delivering reliable and
+              efficient services tailored to client needs.{" "}
             </p>
 
             <div className="space-y-4 text-gray-700">

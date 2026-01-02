@@ -95,7 +95,6 @@ export default function Navbar() {
         { href: '/lifting', label: 'Lifting' },
       ]
     },
-    { href: '/portfolio', label: 'Portfolio' },
     { href: '/contact', label: 'Contact Us' },
   ];
 

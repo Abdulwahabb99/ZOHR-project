@@ -1,16 +1,16 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
-import Link from 'next/link';
+import { useState, useEffect } from "react";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import Link from "next/link";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
   });
 
   const [isMounted, setIsMounted] = useState(false);
@@ -26,8 +26,8 @@ export default function ContactPage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission here
-    console.log('Form submitted:', formData);
-    alert('Thank you for your message! We will get back to you soon.');
+    console.log("Form submitted:", formData);
+    alert("Thank you for your message! We will get back to you soon.");
   };
 
   const handleChange = (
@@ -42,12 +42,14 @@ export default function ContactPage() {
   return (
     <main className="min-h-screen bg-white">
       <Navbar />
-      
+
       {/* Breadcrumb */}
       <div className="bg-gray-50 py-4 border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="text-sm text-gray-600">
-            <Link href="/" className="hover:text-blue-600">Home</Link>
+            <Link href="/" className="hover:text-blue-600">
+              Home
+            </Link>
             <span className="mx-2">/</span>
             <span className="text-gray-900">Contact Us</span>
           </nav>
@@ -65,9 +67,9 @@ export default function ContactPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Information */}
-          <div 
+          <div
             className={`space-y-8 ${
-              isMounted ? 'animate-slide-in-left' : 'slide-in-left-initial'
+              isMounted ? "animate-slide-in-left" : "slide-in-left-initial"
             }`}
           >
             {/* Egypt Branch */}
@@ -79,15 +81,15 @@ export default function ContactPage() {
                 <div className="flex items-start">
                   <span className="font-semibold min-w-[100px]">Address:</span>
                   <span>
-                    Apartment NO 2 building NO 4 Faisal City - ALEXANDRIA - EGYPT
+                    AL-HABIB TOWER, 5TH FLOOR, 2 DAR EL-SALAM STREET, ASAFRA,
+                    SECOND MONTAZAH, ALEXANDRIA, EGYPT
                   </span>
                 </div>
                 <div className="flex items-start">
                   <span className="font-semibold min-w-[100px]">Phone:</span>
                   <div className="space-y-1">
-                    <div>002-01229595209</div>
-                    <div>002-01222301036</div>
-                    <div>002035372108</div>
+                    <div>+2 (015) 15807021</div>
+                    <div>+2 (015) 15807026</div>
                   </div>
                 </div>
                 <div className="flex items-start">
@@ -103,56 +105,22 @@ export default function ContactPage() {
                 </div>
                 <div className="flex items-start">
                   <span className="font-semibold min-w-[100px]">CEO:</span>
-                  <span>MOHAMED SALAH ELDIN</span>
+                  <span>Islam Ramdan</span>
                 </div>
                 <div className="flex items-start">
-                  <span className="font-semibold min-w-[100px]">Sales Manager:</span>
-                  <span>MOHAMED SAKR</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Saudi Arabia Branch */}
-            <div className="bg-gray-50 rounded-lg p-6">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                SAUDI ARABIA BRANCH
-              </h2>
-              <div className="space-y-3 text-gray-700">
-                <div className="flex items-start">
-                  <span className="font-semibold min-w-[100px]">Address:</span>
-                  <span>ELKHUBAR SAUDI ARABIA</span>
-                </div>
-                <div className="flex items-start">
-                  <span className="font-semibold min-w-[100px]">Phone:</span>
-                  <span>00966509566208</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Romania Branch */}
-            <div className="bg-gray-50 rounded-lg p-6">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                ROMANIA BRANCH
-              </h2>
-              <div className="space-y-3 text-gray-700">
-                <div className="flex items-start">
-                  <span className="font-semibold min-w-[100px]">Address:</span>
-                  <span>
-                    BUCURESTI NOI, SEMICENTRAL SECTOR BUCURESTI ROMANIA
+                  <span className="font-semibold min-w-[100px]">
+                    Sales Manager:
                   </span>
-                </div>
-                <div className="flex items-start">
-                  <span className="font-semibold min-w-[100px]">Phone:</span>
-                  <span>0040768029378</span>
+                  <span>Islam Abd El-Hamid</span>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Contact Form */}
-          <div 
+          <div
             className={`${
-              isMounted ? 'animate-slide-in-right' : 'slide-in-right-initial'
+              isMounted ? "animate-slide-in-right" : "slide-in-right-initial"
             }`}
           >
             <div className="bg-gray-50 rounded-lg p-8">
@@ -160,7 +128,8 @@ export default function ContactPage() {
                 Message Us
               </h2>
               <p className="text-gray-600 mb-6">
-                Please fill out the following form and we will get in touch with you soon.
+                Please fill out the following form and we will get in touch with
+                you soon.
               </p>
 
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -256,4 +225,3 @@ export default function ContactPage() {
     </main>
   );
 }
-
