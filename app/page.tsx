@@ -10,7 +10,7 @@ import Footer from '@/components/Footer';
  * This is the main landing page with:
  * - Hero slider
  * - About section
- * - Portfolio section (Our Projects)
+ * - Portfolio section (Our Services)
  */
 export default function Home() {
   return (

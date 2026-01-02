@@ -7,26 +7,21 @@ export default function AboutPage() {
     <main className="min-h-screen bg-white">
       <Navbar />
       
-      {/* Page Header with Background Image */}
-      <div 
-        className="relative py-20 overflow-hidden bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `url(https://mpleg.com/images/slider/437f3242-2.jpg)`,
-        }}
-      >
-        {/* Dark overlay for better text readability */}
-        <div className="absolute inset-0 bg-black/40"></div>
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Breadcrumb */}
-          <nav className="text-sm text-white/90 mb-4">
-            <Link href="/" className="hover:text-white transition-colors">Home</Link>
+      {/* Breadcrumb */}
+      <div className="bg-gray-50 py-4 border-b">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <nav className="text-sm text-gray-600">
+            <Link href="/" className="hover:text-blue-600">Home</Link>
             <span className="mx-2">/</span>
-            <span className="text-white">About Us</span>
+            <span className="text-gray-900">About Us</span>
           </nav>
-          
-          {/* Title */}
-          <h1 className="text-5xl md:text-6xl font-bold text-white">About Us</h1>
+        </div>
+      </div>
+
+      {/* Page Header */}
+      <div className="bg-gray-900 text-white py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h1 className="text-4xl md:text-5xl font-bold">About Us</h1>
         </div>
       </div>
 
@@ -61,11 +56,11 @@ export default function AboutPage() {
 
             {/* Right Column - Image */}
             <div className="relative">
-              <div className="relative w-full aspect-[2/3] rounded-lg overflow-hidden shadow-2xl bg-blue-900">
+              <div className="relative w-full aspect-[3/3] rounded-lg overflow-hidden shadow-2xl bg-blue-900">
                 <img
-                  src="https://mpleg.com/images/WhatsApp%20Image%202021-10-21%20at%2012_34_17%20PM.jpeg"
+                  src="/aboutUs.jpeg"
                   alt="Marine Petroleum Lifting - When you are sleeping we're working hard and growing"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full"
                 />
               </div>
             </div>
@@ -73,7 +68,7 @@ export default function AboutPage() {
 
           {/* Company Info Section */}
           <div className="mt-16 bg-gray-50 rounded-lg p-8 md:p-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">MPLEG</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">ZOHR</h2>
             <p className="text-lg text-gray-700 mb-8">
               We are a group of innovative mindset work together to give you a unique experience.
             </p>

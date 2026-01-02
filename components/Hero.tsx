@@ -16,22 +16,23 @@ const slides: Slide[] = [
     title: "Inspection Experts",
     description: "Get to know our inspectors and how we get the job done.",
     buttonText: "Read More",
-    imageUrl: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1920&h=1080&fit=crop&q=80",
+    imageUrl: "/Inspection Experts.jpeg",
   },
   {
     id: 2,
     title: "Professional Services",
     description: "Delivering excellence in every project we undertake.",
     buttonText: "Learn More",
-    imageUrl: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&h=1080&fit=crop&q=80",
+    imageUrl:
+      "/professional services.jpeg",
   },
-  {
-    id: 3,
-    title: "Quality Assurance",
-    description: "Committed to the highest standards of quality and safety.",
-    buttonText: "Get Started",
-    imageUrl: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=1920&h=1080&fit=crop&q=80",
-  },
+  // {
+  //   id: 3,
+  //   title: "Quality Assurance",
+  //   description: "Committed to the highest standards of quality and safety.",
+  //   buttonText: "Get Started",
+  //   imageUrl: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=1920&h=1080&fit=crop&q=80",
+  // },
 ];
 
 /**
@@ -97,7 +98,7 @@ export default function Hero() {
             }`}
             style={{
               backgroundImage: slide.imageUrl
-                ? `url(${slide.imageUrl})`
+                ? `url("${slide.imageUrl.replace(/\s/g, '%20')}")`
                 : `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("data:image/svg+xml,%3Csvg width='1920' height='1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23e5e7eb;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23d1d5db;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23grad)'/%3E%3C/svg%3E")`,
               backgroundSize: "cover",
               backgroundPosition: "center",
