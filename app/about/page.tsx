@@ -84,6 +84,7 @@ export default function AboutPage() {
                 <img
                   src="/aboutUs.jpeg"
                   alt="Marine Petroleum Lifting - When you are sleeping we're working hard and growing"
+                  loading="lazy"
                   className="w-full h-full"
                 />
               </div>

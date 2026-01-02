@@ -88,6 +88,7 @@ export default function PortfolioSection() {
               <img
                 src={item.imageUrl}
                 alt={item.title}
+                loading="lazy"
                 className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
               />
 

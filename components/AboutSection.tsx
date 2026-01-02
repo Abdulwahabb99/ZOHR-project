@@ -53,6 +53,7 @@ export default function AboutSection() {
                 <img
                   src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=800&fit=crop&q=80"
                   alt="ZOHR - Lifting and Marine Services"
+                  loading="lazy"
                   className="w-full h-full object-cover"
                 />
               </div>
