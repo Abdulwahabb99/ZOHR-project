@@ -24,7 +24,7 @@ const slides: Slide[] = [
     description: "Delivering excellence in every project we undertake.",
     buttonText: "Learn More",
     imageUrl:
-      "/Professional Services.jpeg",
+      "/4.jpeg",
   },
   // {
   //   id: 3,

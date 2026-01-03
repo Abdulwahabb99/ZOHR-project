@@ -48,16 +48,12 @@ export default function AboutSection() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 items-center">
             {/* Image/Visual Section */}
-            <div className="fade-in-element opacity-0 translate-y-8 transition-all duration-700">
-              <div className="relative aspect-square rounded-2xl overflow-hidden shadow-xl">
-                <img
-                  src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=800&fit=crop&q=80"
+            <img
+                  src="/Professional Services.jpeg"
                   alt="ZOHR - Lifting and Marine Services"
                   loading="lazy"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
-              </div>
-            </div>
 
             {/* Content Section */}
             <div className="fade-in-element opacity-0 translate-y-8 transition-all duration-700 delay-200">
