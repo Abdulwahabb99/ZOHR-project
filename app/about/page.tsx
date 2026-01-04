@@ -83,7 +83,7 @@ export default function AboutPage() {
               <div className="relative w-full aspect-[3/3] rounded-lg overflow-hidden shadow-2xl bg-blue-900">
                 <img
                   src="/aboutUs.jpeg"
-                  alt="Marine Petroleum Lifting - When you are sleeping we're working hard and growing"
+                  alt="ZOHR - When you are sleeping we're working hard and growing"
                   loading="lazy"
                   className="w-full h-full"
                 />

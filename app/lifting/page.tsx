@@ -77,22 +77,19 @@ export default function LiftingPage() {
       title: "Magnetic Penetration Inspection (MPI)",
       items: ["Non-Destructive Test (NDT)"],
       category: "Magnetic Penetration Inspection",
-      imageUrl:
-        "/MPI.jpeg",
+      imageUrl: "/MPI.jpeg",
     },
     {
       title: "Dye Penetration Inspection (DPI)",
       items: ["Non-Destructive Test (NDT)"],
       category: "Dye Penetration Inspection",
-      imageUrl:
-        "/DYE.jpeg",
+      imageUrl: "/DYE.jpeg",
     },
     {
       title: "Ultrasonic Test (UT)",
       items: ["Thickness", "Shock Wave"],
       category: "Ultrasonic Test",
-      imageUrl:
-        "/UT.jpeg",
+      imageUrl: "/UT.jpeg",
     },
   ];
 
@@ -124,12 +121,18 @@ export default function LiftingPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="prose prose-lg max-w-none mb-12">
           <p className="text-lg text-gray-700 leading-relaxed">
-            Marine Petroleum Lifting hopes to help you work in a safe
-            environment by detecting defects before they cause severe damage. We
-            are inspected according to the relevant regulations and standards.
-            We maintain an easy-to-use database system that ensures you instant
-            access to certification and test reports wherever you are and
-            anytime you want.
+            ZOHR for Supplies and Services is committed to supporting safe
+            working environments by identifying defects at an early stage,
+            before they develop into serious failures or incidents. All
+            inspections and services are carried out in accordance with
+            applicable regulations, international standards, and industry best
+            practices. We maintain a user-friendly digital database system that
+            provides our clients with instant access to inspection records,
+            certification, and test reports anytime and from anywhere, ensuring
+            full transparency and traceability. Our experienced and qualified
+            team is competent to inspect, test, and certify a wide range of
+            lifting equipment, delivering reliable and efficient services
+            tailored to client needs.
           </p>
           <p className="text-lg text-gray-700 leading-relaxed mt-4">
             Our crew is qualified to work with all the following lifting
